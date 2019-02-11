@@ -1,0 +1,21 @@
+version: '3.1'
+
+services:
+  
+  # Alias del servicio
+  nginx-original: 
+
+    # Imagen oficial / original de Nginx
+    image: nginx:latest 
+    
+    ports:
+      # puerto host : puerto contenedor
+      - 8881:80 
+  
+  nginx-custom:
+    
+    # Imagen con contenido personalizado de Nginx
+    image: 'kdsoftio/netweeks:0.2' 
+    
+    ports:
+      - 8883:80
